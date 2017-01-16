@@ -10136,7 +10136,7 @@ p a:hover
 }
 .quiz__var_open.quiz__var_false .quiz__box:after
 {
-    content: 'Try again !';
+    content: '再试一次 !';
 
     color: #ee4036;
 }

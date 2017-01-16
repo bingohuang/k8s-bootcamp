@@ -31,18 +31,18 @@ $(function() {
 $(function() {
 
 	var quizDataM1 = [{
-		text	: 'At its core, Kubernetes is a platform for:',
+		text	: '从核心说，Kubernetes 平台是用来做：',
 		answers : [{
-			text		: 'Provisioning machines (similar to Puppet, Ansible)',
-			note		: 'Kubernetes can schedule workloads on the cluster nodes but it is not a machine provisioning tool.',
+			text		: '配置机器 (类似于 Puppet 或 Ansible)',
+			note		: 'Kubernetes 能够调度集群节点的工作负载，但是它不是一个机器配置工具。',
 			isCorrect	: false
 		},{
-			text		: 'Running and scheduling container applications on a cluster',
-			note		: 'Kubernetes allows you to orchestrate and manage containers on distributed systems',
+			text		: '在集群上运行和调度容器化应用',
+			note		: 'Kubernetes允许你在分布式系统中编排和管理容器。',
 			isCorrect	: true
 		},{
-			text		: 'Packaging software in containers',
-			note		: 'The tool you’ll use to package your software will be Docker or rkt.',
+			text		: '在容器中打包软件',
+			note		: '在容器中打包软件的工具应该是Docker或者rkt。',
 			isCorrect	: false
 		}],
 	},{
@@ -319,9 +319,9 @@ $(function() {
 								<div class="item {{ i === 0 ? "active" : "" }}">\
 									<div class="row">\
 										<div class="col-md-12">\
-											<h2>Question {{ i + 1 }}</h2>\
+											<h2>问题 {{ i + 1 }}</h2>\
 											<p>{{ text }}</p>\
-											<p style="color: #3771e3;"><i>Select one answer</i></p>\
+											<p style="color: #3771e3;"><i>请选择一个答案</i></p>\
 										</div>\
 									</div>\
 									<div class="quiz__list {{ answered ? "quiz__list_open" : "" }}">\
