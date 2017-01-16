@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Kubernetes Bootcamp</title>
+	<title>K8S训练营</title>
 	<meta name="description" content="K8S">
 	<meta name="keywords" content="K8S Keywords">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -21,15 +21,15 @@
 	<meta name="twitter:creator" content="@k8s">
 	<meta name="twitter:image:src" content="./public/uploads/soc_index.jpg">
 	<meta name="twitter:domain" content="index.html">
-	<meta itemprop="name" content="K8S - Bootcamp Overview">
+	<meta itemprop="name" content="K8S - Bootcamp 集群创建">
 	<meta itemprop="description" content="K8S">
 	<meta itemprop="image" content="./public/uploads/soc_index.jpg">
 
-	
+
 	<link rel="manifest" href="./manifest.json?v=1470121828958">
 	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1470121828958" color="#A2B2F2">
 	<meta name="msapplication-TileColor" content="#A2B2F2">
-	
+
 	<meta name="theme-color" content="#A2B2F2">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
@@ -43,14 +43,13 @@
 	<link href="./public/css/styles.css" rel="stylesheet">
 
 	<!--<script src="./public/js/jquery-3.1.0.min.js"></script>-->
-	<script src="./public/js/jquery-1.12.1.min.js"></script>
-	<script>
+	<script src="./public/js/jquery-1.12.1.min.js"></script><script>
 		$(function(){
 			$("#includedAside").load("aside.html");
 		});
 	</script>
-	
-	
+
+
 	<script src="./public/js/bootstrap.min.js"></script>
 	<script src="./public/js/swiper.jquery.min.js"></script>
     <script src='./public/js/ractive.js'></script>
@@ -63,6 +62,8 @@
 <div class="layout" id="top">
 
 	<div id="includedAside"></div>
+	<!--<object type="text/html" data="aside.html"></object>-->
+	<!--<div w3-include-html="aside.html"></div>-->
 
 	<!-- content start -->
 	<main class="content">
@@ -73,34 +74,34 @@
 		<div class="row">
 			<div class="col-md-12">
 				<ol class="breadcrumb">
-					<li class="active">Module 1</li>
-					<li>Duration: 10 mins</li>
+					<li class="active">关卡 1</li>
+					<li>大概需要: 10 分钟</li>
 				</ol>
 			</div>
 		</div>
 
-		<h1>Create a Kubernetes cluster</h1>
+		<h1>集群创建</h1>
 
 		<div class="row">
 			<div class="col-md-12 text-left">
-				<a class="btn btn-default" href="index.html" role="button"><span class="btn__prev">‹</span> Back</a>
+				<a class="btn btn-default" href="index.html" role="button"><span class="btn__prev">‹</span> 返回</a>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-8">
-				<h3>Module overview</h3>
+				<h3>模块总览</h3>
 				<ul style="color: #3771e3;">
-					<li><i>learn what a Kubernetes cluster is</i></li>
-					<li><i>learn what <a href="https://github.com/kubernetes/minikube">minikube</a> is</i></li>
-					<li><i>start a Kubernetes cluster using an online terminal</i></li>
+					<li><i>学习什么是Kubernetes集群</i></li>
+					<li><i>学习什么是<b><a href="https://github.com/kubernetes/minikube">minikube</a></b></i></li>
+					<li><i>使用在线终端创建集群</i></li>
 				</ul>
 				<p><img src="./public/images/module_01.svg?v=1469803628347"></p>
 			</div>
 			<div class="col-md-4">
 				<div class="content__box content__box_lined">
-					<h3>What you need to know first</h3>
+					<h3>预备知识</h3>
 					<p>
-						Read about application containers like:<br>
+						了解有哪些应用容器，比如:<br>
 						<a href="https://docs.docker.com/engine/getstarted">Docker</a><br>
 						<a href="https://coreos.com/rkt/docs/latest/getting-started-guide.html">rkt</a>
 					</p>
@@ -110,7 +111,7 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<a class="btn btn-lg btn-success" href="1-1.html" role="button">Start Module 1 <span class="btn__next">›</span></a>
+				<a class="btn btn-lg btn-success" href="1-1.html" role="button">训练开始 <span class="btn__next">›</span></a>
 			</div>
 		</div>
 
@@ -121,7 +122,20 @@
 
 </div>
 
-
-
 </body>
+
+
+<!--<script>-->
+	<!--w3IncludeHTML();-->
+	<!--&lt;!&ndash;$(document).ready(function(){&ndash;&gt;-->
+		<!--&lt;!&ndash;&lt;!&ndash;$("#includedAside").attr('class', 'test');&ndash;&gt;&ndash;&gt;-->
+		<!--&lt;!&ndash;$("#sidebar_1").attr('class', 'sidebar__subnav open marked');&ndash;&gt;-->
+	<!--&lt;!&ndash;});&ndash;&gt;-->
+<!--</script>-->
+
+
+<!--<script>-->
+	<!--document.getElementById("sidebar_1").className = "sidebar__subnav open marked";-->
+<!--</script>-->
+
 </html>
