@@ -46,33 +46,33 @@ $(function() {
 			isCorrect	: false
 		}],
 	},{
-		text	: 'In Kubernetes, a node is:',
+		text	: '在Kubernetes中，node是:',
 		answers : [{
-			text		: 'A tool for starting a kubernetes cluster on a local machine',
-			note		: 'You can start a Kubernetes cluster using minikube',
+			text		: '在本地机器上启动Kubernetes集群的工具',
+			note		: 'Minikube才可以用来启动Kubernetes集群',
 			isCorrect	: false
 		},{
-			text		: 'A worker machine',
-			note		: 'The Kubernetes nodes are the place where we’re going to deploy our applications',
+			text		: '一台工作机',
+			note		: 'Node正是用于部署应用的的地方',
 			isCorrect	: true
 		},{
-			text		: 'A machine that coordinates the scheduling and management of application containers on the cluster',
-			note		: 'The Master is coordinating the Kubernetes cluster',
+			text		: '一台协调调度应用容器和管理集群的机器',
+			note		: 'Master才是用于协调Kubernetes集群',
 			isCorrect	: false
 		}],
 	},{
-		text	: 'What can you deploy on Kubernetes?',
+		text	: '你能在Kubernetes上部署什么？',
 		answers : [{
-			text		: 'Containers',
-			note		: 'Kubernetes supports Docker, rkt and other types of containers',
+			text		: '容器',
+			note		: 'Kubernetes 支持 Docker、rkt和其它类型的容器',
 			isCorrect	: true
 		},{
-			text		: 'Virtual machines',
-			note		: 'Kubernetes (on its own) cannot deploy virtual machines',
+			text		: '虚拟机',
+			note		: 'Kubernetes自身不能部署虚拟机',
 			isCorrect	: false
 		},{
-			text		: 'System processes (like sshd, httpd)',
-			note		: 'Kubernetes (on its own) cannot deploy system processes',
+			text		: '系统进程(比如 sshd, httpd)',
+			note		: 'Kubernetes自身不能部署系统进程',
 			isCorrect	: false
 		}],
 	}]
