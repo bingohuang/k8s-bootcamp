@@ -46,7 +46,7 @@
 	<script src="./public/js/jquery-1.12.1.min.js"></script>
 	<script>
 		$(function(){
-			$("#includedAside").load("aside-1.html");
+            $(".includedFooter").load("footer.html");
 		});
 	</script>
 	<script src="./public/js/embed.js"></script>
@@ -61,7 +61,93 @@
 <body>
 
 <div class="layout" id="top">
-	<div id="includedAside"></div>
+	<!-- aside start -->
+	<aside class="sidebar">
+		<div class="sidebar__inner">
+			<header class="header">
+				<a class="header__site" href="index.html">
+					<img class="header__logo" src="./public/images/logo.svg?v=1470121829149" alt="">
+					<img class="header__logo-mobile" src="./public/images/logo_2.svg?v=1470121829149" alt="">
+					<span class="header__name">K8S训练营</span>
+				</a>
+				<div class="header__sider">
+					<div class="header__burger"></div>
+				</div>
+			</header>
+
+			<ul class="nav">
+				<li class="marked">
+					<a href="index.html">
+						<span class="sidebar__ico"></span>
+						训练营总览
+					</a>
+				</li>
+				<li id="sidebar_1" class="sidebar__subnav open marked">
+					<a href="1-0.html">
+						<span class="sidebar__ico"></span>
+						1. 集群创建
+					</a>
+					<ul class="nav">
+						<li class="marked">
+							<a href="1-1.html">
+								<span class="sidebar__ico"></span>
+								技能学习
+							</a>
+						</li>
+						<li class="active marked">
+							<a href="1-2.html">
+								<span class="sidebar__ico"></span>
+								实战演练
+							</a>
+						</li>
+						<li>
+							<a href="1-3.html">
+								<span class="sidebar__ico"></span>
+								过关测试
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="sidebar__subnav">
+					<a href="#">
+						<span class="sidebar__ico"></span>
+						2. 应用部署
+					</a>
+				</li>
+				<li class="sidebar__subnav">
+					<a href="#">
+						<span class="sidebar__ico"></span>
+						3. 应用探索
+					</a>
+				</li>
+				<li class="sidebar__subnav">
+					<a href="#">
+						<span class="sidebar__ico"></span>
+						4. 应用发布
+					</a>
+				</li>
+				<li class="sidebar__subnav">
+					<a href="#">
+						<span class="sidebar__ico"></span>
+						5. 应用扩容
+					</a>
+				</li>
+				<li class="sidebar__subnav">
+					<a href="#">
+						<span class="sidebar__ico"></span>
+						6. 应用升级
+					</a>
+				</li>
+			</ul>
+			<!-- footer start -->
+			<footer class="footer" role="contentinfo">
+				<div class="includedFooter"></div>
+			</footer>
+			<a class="scrolltop" href="#top"></a>
+			<!-- footer end -->
+		</div>
+	</aside>
+	<!-- aside end -->
 
 
 	<!-- content start -->
@@ -88,7 +174,7 @@
 		<br>
 		<div class="katacoda">
 			<div class="katacoda__alert">
-				To interact with the Terminal, please use the desktop/tablet version
+				请使用桌面版做实战演练
 			</div>
 			<div class="katacoda__box" id="inline-terminal-1"  data-katacoda-id="kubernetes-bootcamp/1" data-katacoda-color="326de6" data-katacoda-secondary="273d6d" data-katacoda-hideintro="false" data-katacoda-font="Roboto" data-katacoda-fontheader="Roboto Slab" data-katacoda-prompt="Kubernetes Bootcamp Terminal" style="height: 600px;"></div>
 		</div>
@@ -104,9 +190,13 @@
 	</main>
 	<!-- content end -->
 
+	<!-- footer start -->
+	<footer class="footer" role="contentinfo">
+		<div class="includedFooter"></div>
+	</footer>
 
 	<a class="scrolltop" href="#top"></a>
-
+	<!-- footer end -->
 
 </div>
 
