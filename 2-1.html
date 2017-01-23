@@ -214,12 +214,12 @@
 		<div class="row">
 			<div class="col-md-8">
 				<p>
-				Once you have a running Kubernetes cluster, you can deploy your containerized applications on top of it. To do so, you create a Kubernetes <b>Deployment</b>. The Deployment is responsible for creating and updating instances of your application. Once you've created a Deployment, the Kubernetes master schedules the application instances that the Deployment creates onto individual Nodes in the cluster.
+				一旦你的Kubernetes集群运行起来，就可以在上面添加容器化的应用了。首先，要创建一个Kubernetes<b>部署</b>。这个部署负责创建和更新应用的实例，只要你创建了一个部署，Kubernetes的master就可以调度Deployment在集群中单个节点上创建的应用实例。
 				</p>
 
-				<p>Once the application instances are created, a Kubernetes Deployment Controller continuously monitors those instances. The Deployment controller replaces an instance if the Node hosting it goes down or it is deleted. <b>This provides a self-healing mechanism to address machine failure or maintenance.</b></p>
+				<p>一旦应用实例被创建出来，Kubernetes的Deployment Controller就会持续地监控这些实例。如果托管实例的Node宕掉或被删除，Deployment Controller会替换上一个新的实例。<b>这提供了一种自我修复机制，来解决机器宕机或维护的问题。</b></p>
 
-				<p>In a pre-orchestration world, installation scripts would often be used to start applications, but they did not allow recovery from machine failure.  By both creating your application instances and keeping them running across Nodes, Kubernetes Deployments provide a fundamentally different approach to application management. </p>
+				<p>在预编排的世界中，安装脚本通常被用来启动应用，但它们不允许从机器宕机中恢复。通过创建应用实例，并保证其在Node之间保持运行，Kubernetes的Deployment提供了一种完全不同的应用管理机制。</p>
 
 
 
