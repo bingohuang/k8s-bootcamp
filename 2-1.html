@@ -204,7 +204,7 @@
 
 		<div class="row">
 			<div class="col-md-12 text-left">
-				<a class="btn btn-default" href="2-0.html" role="button"><span class="btn__prev">‹</span> Back</a>
+				<a class="btn btn-default" href="2-0.html" role="button"><span class="btn__prev">‹</span> 返回</a>
 			</div>
 		</div>
 
@@ -214,7 +214,7 @@
 		<div class="row">
 			<div class="col-md-8">
 				<p>
-				一旦你的Kubernetes集群运行起来，就可以在上面添加容器化的应用了。首先，要创建一个Kubernetes<b>部署</b>。这个部署负责创建和更新应用的实例，只要你创建了一个部署，Kubernetes的master就可以调度Deployment在集群中单个节点上创建的应用实例。
+				一旦你的Kubernetes集群运行起来，就可以在上面添加容器化的应用了。首先，要创建一个Kubernetes<b>Deployment</b>。这个Deployment负责创建和更新应用的实例，只要你创建了Deployment，Kubernetes的master就可以调度这个Deployment在集群中单个节点上创建的应用实例。
 				</p>
 
 				<p>一旦应用实例被创建出来，Kubernetes的Deployment Controller就会持续地监控这些实例。如果托管实例的Node宕掉或被删除，Deployment Controller会替换上一个新的实例。<b>这提供了一种自我修复机制，来解决机器宕机或维护的问题。</b></p>

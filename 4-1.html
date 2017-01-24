@@ -25,11 +25,11 @@
 	<meta itemprop="description" content="K8S">
 	<meta itemprop="image" content="./public/uploads/soc_index.jpg">
 
-	
+
 	<link rel="manifest" href="./manifest.json?v=1470121828969">
 	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1470121828969" color="#A2B2F2">
 	<meta name="msapplication-TileColor" content="#A2B2F2">
-	
+
 	<meta name="theme-color" content="#A2B2F2">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
@@ -44,8 +44,8 @@
 
 	<!--<script src="./public/js/jquery-3.1.0.min.js"></script>-->
 	<script src="./public/js/jquery-1.12.1.min.js"></script>
-	
-	
+
+
 	<script src="./public/js/bootstrap.min.js"></script>
 	<script src="./public/js/swiper.jquery.min.js"></script>
     <script src='./public/js/ractive.js'></script>
@@ -57,7 +57,7 @@
 
 <div class="layout" id="top">
 
-	
+
 
 	<aside class="sidebar">
 		<div class="sidebar__inner">
@@ -185,7 +185,7 @@
 
 
 
-	
+
 
 	<main class="content">
 		<div class="content__sider">
@@ -195,7 +195,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<ol class="breadcrumb">
-					<li class="active"><a href="4-0.html">Module 4 | Expose your app publicly</a></li>
+					<li class="active"><a href="4-0.html">关卡4 | 发布你的应用</a></li>
 				</ol>
 			</div>
 		</div>
@@ -204,7 +204,7 @@
 
 		<div class="row">
 			<div class="col-md-12 text-left">
-				<a class="btn btn-default" href="4-0.html" role="button"><span class="btn__prev">‹</span> Back</a>
+				<a class="btn btn-default" href="4-0.html" role="button"><span class="btn__prev">‹</span> 返回</a>
 			</div>
 		</div>
 
@@ -213,26 +213,26 @@
 
 		<div class="row">
 			<div class="col-md-8">
-			<p>While Pods do have their own unique IP across the cluster, those IP’s are not exposed outside  Kubernetes. Taking into account that over time Pods may be terminated, deleted or replaced by other Pods, we need a way to let other Pods and applications automatically discover each other. Kubernetes addresses this by grouping Pods in Services. A Kubernetes <b>Service</b> is an abstraction layer which defines a logical set of Pods and enables external traffic exposure, load balancing and service discovery for those Pods.</p>
+			<p>尽管Pod在集群内有自己唯一的IP地址，但这些IP地址并没有暴露在Kubernetes之外。考虑到随着时间的推移Pod可能会被停止、删除或替换，我们需要一种机制，能让各个Pod和应用可以自动地找到彼此。Kubernetes的解决方案是将Pod组合为Service。Kubernetes的<b>Service</b>是一个抽象层，它定义了Pod的逻辑组合，可以处理Pod的外部流量，负载均衡和服务发现。</p>
 
-			<p>This abstraction will allow us to expose Pods to traffic originating from outside the cluster. Services have their own unique cluster-private IP address and expose a port to receive traffic. If you choose to expose the service outside the cluster, the options are:</p>
+			<p>这种抽象能将Pod暴露给集群之外的流量访问，Service有自己唯一的集群内私有IP地址，也会向外部流量暴露一个端口。如果你需要在集群外访问这些服务，可以选择以下方式：</p>
 			<ul>
-				<li>LoadBalancer - provides a public IP address (what you would typically use when you run Kubernetes on GKE or AWS)</li>
-				<li>NodePort - exposes the Service on the same port on each Node of the cluster using NAT (available on all Kubernetes clusters, and in Minikube)</li>
+				<li>负载均衡器：提供一个公有的IP地址（通常会在GKE或AWS上运行Kubernetes时用到）</li>
+				<li>NodePort：通过NAT（所有Kubernetes集群和Minikube都适用）将集群上的Service暴露在相同的端口上</li>
 			</ul>
 			</div>
 			<div class="col-md-4">
 				<div class="content__box content__box_lined">
-					<h3>Summary:</h3>
+					<h3>总结：</h3>
 					<ul>
-						<li>Exposing Pods to external traffic</li>
-						<li>Load balancing traffic across multiple Pods</li>
-						<li>Using labels</li>
+						<li>将Pod暴露给外部流量</li>
+						<li>跨Pod的流量负载均衡</li>
+						<li>使用label</li>
 					</ul>
 				</div>
 				<div class="content__box content__box_fill">
 						<p><i>
-							A Kubernetes Service is an abstraction layer which defines a logical set of Pods and enables external traffic exposure, load balancing and service discovery for those Pods. 
+							Kubernetes的Service是一个抽象层，它定义了Pod的逻辑组合，可以处理Pod的外部流量，负载均衡和服务发现。
 						</i></p>
 				</div>
 			</div>
@@ -241,7 +241,7 @@
 
 		<div class="row">
 			<div class="col-md-8">
-				<h2 style="color: #3771e3;">Services overview</h2>
+				<h2 style="color: #3771e3;">Service概览</h2>
 			</div>
 		</div>
 
@@ -255,16 +255,16 @@
 		<div class="row">
 			<div class="col-md-8">
 
-				<p>A Service provides load balancing of traffic across the contained set of Pods. This is useful when a service is created to group all Pods from a specific Deployment (our application will make use of this in the next module, when we’ll have multiple instances running).</p>
+				<p>Service提供了Pod间流量的负载均衡，如果Service是被用来组合一个来自特定Deployment（在下一个关卡中，有多个实例运行的情况，我们的应用会使用到这个功能）的所有Pod，这个功能会非常有用。</p>
 
-				<p>Services are also responsible for service-discovery within the cluster (covered in Module 6). This will for example allow a frontend service (like a webserver) to receive traffic from a backend service (like a database) without worrying about Pods.</p> 
+				<p>Service也负责集群内部的服务发现（关卡6中会涉及），这样前端服务（如web服务器）可以不用关心Pod，就能接收到后端服务（如数据库）的流量。</p>
 
-				<p>Services match a set of Pods using Label Selectors, a grouping primitive that allows logical operation on Labels.</p>
-				
+				<p>Service通过Label Selector来给Pod配对，Label Selector是一个能在Label上进行逻辑操作的分组基元。</p>
+
 			</div>
 			<div class="col-md-4">
 				<div class="content__box content__box_fill">
-					<p><i> You can create a Service when you start a Deployment  by adding --expose as a parameter for the kubectl run command </i></p>
+					<p><i> 你可以通过在kubectl的run命令后添加--expose参数，在启动Deployment时创建一个Service </i></p>
 				</div>
 			</div>
 		</div>
@@ -273,12 +273,12 @@
 
 		<div class="row">
 			<div class="col-md-8">
-				<p><b>Labels</b> are key/value pairs that are attached to objects, such as Pods and you can think of them as hashtags from social media. They are used to organize related objects in a way meaningful to the users like:</p>
+				<p><b>Label</b>是绑定到对象（比如Pod）的键值对，你可以把它想象为社交网络中的话题标签。它们用来组合相关的对象 are key/value pairs that are attached to objects, such as Pods and you can think of them as hashtags from social media. They are used to organize related objects in a way meaningful to the users like:</p>
 				<ul>
 					<li>Production environment (production, test, dev)</li>
 					<li>Application version (beta, v1.3)</li>
 					<li>Type of service/server (frontend, backend, database)</li>
-				</ul>	
+				</ul>
 			</div>
 			<div class="col-md-4">
 				<div class="content__box content__box_fill">
@@ -305,7 +305,7 @@
 				<p>Labels can be attached to objects at the creation time or later and can be modified at any time.
 				The kubectl run command sets some default Labels/Label Selectors on the new Pods/ Deployment. The link between Labels and Label Selectors defines the relationship between the Deployment and the Pods it creates.</p>
 
-				<p>Let’s expose now our application with the help of a Service, and apply some new Labels.</p> 
+				<p>Let’s expose now our application with the help of a Service, and apply some new Labels.</p>
 			</div>
 		</div>
 		<br>
@@ -320,7 +320,7 @@
 
 
 
-	
+
 		<!-- header start -->
 <footer class="footer" role="contentinfo">
 	<div class="footer__content">
@@ -362,7 +362,7 @@
 	</div>
 </footer>
 <!-- header finish --> <a class="scrolltop" href="#top"></a>
-	
+
 
 </div>
 
