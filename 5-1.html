@@ -25,11 +25,11 @@
 	<meta itemprop="description" content="K8S">
 	<meta itemprop="image" content="./public/uploads/soc_index.jpg">
 
-	
+
 	<link rel="manifest" href="./manifest.json?v=1470121828969">
 	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1470121828969" color="#A2B2F2">
 	<meta name="msapplication-TileColor" content="#A2B2F2">
-	
+
 	<meta name="theme-color" content="#A2B2F2">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
@@ -44,8 +44,8 @@
 
 	<!--<script src="./public/js/jquery-3.1.0.min.js"></script>-->
 	<script src="./public/js/jquery-1.12.1.min.js"></script>
-	
-	
+
+
 	<script src="./public/js/bootstrap.min.js"></script>
 	<script src="./public/js/swiper.jquery.min.js"></script>
     <script src='./public/js/ractive.js'></script>
@@ -57,7 +57,7 @@
 
 <div class="layout" id="top">
 
-	
+
 
 	<aside class="sidebar">
 		<div class="sidebar__inner">
@@ -186,7 +186,7 @@
 
 
 
-	
+
 
 	<main class="content">
 		<div class="content__sider">
@@ -196,12 +196,12 @@
 		<div class="row">
 			<div class="col-md-12">
 				<ol class="breadcrumb">
-					<li class="active"><a href="5-0.html">Module 5 | Scale up your app</a></li>
+					<li class="active"><a href="5-0.html">关卡5 | 应用的扩缩容</a></li>
 				</ol>
 			</div>
 		</div>
 
-		<h1>Running multiple instances of an app</h1>
+		<h1>运行一个应用的多个实例</h1>
 
 		<div class="row">
 			<div class="col-md-12 text-left">
@@ -214,20 +214,20 @@
 
 		<div class="row">
 			<div class="col-md-8">
-			<p>In the previous modules we created a <a href="http://kubernetes.io/docs/user-guide/deployments/"> Deployment</a>, and then exposed it publicly via a <a href="http://kubernetes.io/docs/user-guide/services/"> Service </a>. The Deployment created  only one Pod for running our application.  When traffic increases, we will need to scale the application to keep up with  user demand.</p>
+			<p>在之前的关卡中，我们创建了一个<a href="http://kubernetes.io/docs/user-guide/deployments/">Deployment</a>，然后通过一个<a href="http://kubernetes.io/docs/user-guide/services/">Service</a>让外部能够访问到它。之前这个Deployment在运行应用时，只创建了一个Pod，当流量过来时，我们要按需实现应用的扩缩容。</p>
 
-			<p><b>Scaling</b> is accomplished by changing the number of replicas in a Deployment</p>
+			<p><b>扩缩容</b>是通过改变一个Deploument中实例的个数来实现的。</p>
 
 			</div>
 			<div class="col-md-4">
 				<div class="content__box content__box_lined">
-					<h3>Summary:</h3>
+					<h3>总结：</h3>
 					<ul>
-						<li>Scaling a Deployment</li>
+						<li>Deployment的扩缩容</li>
 					</ul>
 				</div>
 				<div class="content__box content__box_fill">
-					<p><i> You can create from the start a Deployment with multiple instances using the --replicas parameter for the kubectl run command </i></p>
+					<p><i>你可以在启动Deployment时，就通过kubectl命令行中的--replicas参数，为Deployment设置多个实例。</i></p>
 				</div>
 			</div>
 		</div>
@@ -235,7 +235,7 @@
 
 		<div class="row">
 			<div class="col-md-8">
-				<h2 style="color: #3771e3;">Scaling overview</h2>
+				<h2 style="color: #3771e3;">扩缩容概览</h2>
 			</div>
 		</div>
 
@@ -258,10 +258,10 @@
 					  </div>
 
 					  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-						<span class="sr-only ">Previous</span>
+						<span class="sr-only ">返回</span>
 					  </a>
 					  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-						<span class="sr-only">Next</span>
+						<span class="sr-only">下一步</span>
 					  </a>
 
 					</div>
@@ -273,14 +273,14 @@
 		<div class="row">
 			<div class="col-md-8">
 
-				<p>Scaling up a Deployment will ensure new Pods are created and scheduled to Nodes with available resources. Scaling down will reduce the number of Pods to the new desired state. Kubernetes also supports <a href="http://kubernetes.io/docs/user-guide/horizontal-pod-autoscaling/"> autoscaling </a> of Pods, but it is outside of the scope of this tutorial. Scaling to zero is also possible, and it will terminate all Pods of the specified Deployment.</p>
+				<p>扩展一个Deployment时，要保证新的Pod被创建和被编排到Node上时，有足够的资源，缩容时会相应地减少Pod的数量。Kubernetes还支持Pod的<a href="http://kubernetes.io/docs/user-guide/horizontal-pod-autoscaling/">自动扩展</a>但这超出了我们本次实战的范围。Kubernetes也支持缩容到0，这会停止Deployment中的所有Pod。</p>
 
-				<p>Running multiple instances of an application will require a way to distribute the traffic to all of them. Services have an integrated load-balancer that will distribute network traffic to all Pods of an exposed Deployment. Services will monitor continuously the running Pods using endpoints, to ensure the traffic is sent only to available Pods.</p> 
-				
+				<p>一个应用运行多个实例，必然要用到流量的分发机制。Service有一个内置的负载均衡器，可以将网络流量分发给Pod。Service会通过端口持续监控这些运行的Pod，从而保证流量只分发给可用的Pod。</p>
+
 			</div>
 			<div class="col-md-4">
 				<div class="content__box content__box_fill">
-					<p><i>Scaling is accomplished by changing the number of replicas in a Deployment.</i></p>
+					<p><i>扩缩容是通过改变一个Deploument中实例的个数来实现的。</i></p>
 				</div>
 			</div>
 		</div>
@@ -289,14 +289,14 @@
 
 		<div class="row">
 			<div class="col-md-8">
-				<p> Once you have multiple instances of an Application running, you would be able to do Rolling updates without downtime. We’ll cover that in the next module. Now, let’s go to the online terminal and scale our application.</p>	
+				<p>一旦你的应用中运行多个实例时，你还要能实现无宕机地更新它们，我们会在下个关卡中介绍这部分内容。现在让我们进入实战演练环节，来练习下如何实现应用的扩缩容吧！</p>
 			</div>
 		</div>
 		<br>
 
 		<div class="row">
 			<div class="col-md-12">
-				<a class="btn btn-lg btn-success" href="5-2.html" role="button">Start Interactive Tutorial <span class="btn__next">›</span></a>
+				<a class="btn btn-lg btn-success" href="5-2.html" role="button">实战演练<span class="btn__next">›</span></a>
 			</div>
 		</div>
 
@@ -305,7 +305,7 @@
 
 
 
-	
+
 		<!-- header start -->
 <footer class="footer" role="contentinfo">
 	<div class="footer__content">
@@ -347,7 +347,7 @@
 	</div>
 </footer>
 <!-- header finish --> <a class="scrolltop" href="#top"></a>
-	
+
 
 </div>
 

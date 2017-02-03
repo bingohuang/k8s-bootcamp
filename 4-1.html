@@ -273,16 +273,16 @@
 
 		<div class="row">
 			<div class="col-md-8">
-				<p><b>Label</b>是绑定到对象（比如Pod）的键值对，你可以把它想象为社交网络中的话题标签。它们用来组合相关的对象 are key/value pairs that are attached to objects, such as Pods and you can think of them as hashtags from social media. They are used to organize related objects in a way meaningful to the users like:</p>
+				<p><b>Label</b>是绑定到对象（比如Pod）的键值对，你可以把它想象为社交网络中的话题标签。它们将相关的对象以一种用户可以理解的方式组合起来，比如：</p>
 				<ul>
-					<li>Production environment (production, test, dev)</li>
-					<li>Application version (beta, v1.3)</li>
-					<li>Type of service/server (frontend, backend, database)</li>
+					<li>生产环境（生产，测试，开发）</li>
+					<li>应用版本（beta，v1.3）</li>
+					<li>服务/服务器类型（前端，后端，数据库）</li>
 				</ul>
 			</div>
 			<div class="col-md-4">
 				<div class="content__box content__box_fill">
-					<p><i> Labels are key/value pairs that are attached to objects </i></p>
+					<p><i> Label是绑定到对象的键/值对</i></p>
 				</div>
 			</div>
 		</div>
@@ -302,16 +302,16 @@
 		<div class="row">
 			<div class="col-md-8">
 
-				<p>Labels can be attached to objects at the creation time or later and can be modified at any time.
-				The kubectl run command sets some default Labels/Label Selectors on the new Pods/ Deployment. The link between Labels and Label Selectors defines the relationship between the Deployment and the Pods it creates.</p>
+				<p>可以在对象的创建之初，将Label绑定到对象上，也可以后续绑定，并且可以随时更新绑定关系。
+				kubectl的run命令在新的Pods/ Deployment上设置了一些默认的Labels/Label Selectors。Label和Label Selectors之前的关系定义了Deployment和其创建的Pod之间的关系。</p>
 
-				<p>Let’s expose now our application with the help of a Service, and apply some new Labels.</p>
+				<p>下面让我们通过Service实现应用的外部访问，然后练习下Label的使用吧！</p>
 			</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="col-md-12">
-				<a class="btn btn-lg btn-success" href="4-2.html" role="button">Start Interactive Tutorial <span class="btn__next">›</span></a>
+				<a class="btn btn-lg btn-success" href="4-2.html" role="button">实战演练<span class="btn__next">›</span></a>
 			</div>
 		</div>
 
