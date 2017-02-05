@@ -25,11 +25,11 @@
 	<meta itemprop="description" content="K8S">
 	<meta itemprop="image" content="./public/uploads/soc_index.jpg">
 
-	
+
 	<link rel="manifest" href="./manifest.json?v=1470121828969">
 	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1470121828969" color="#A2B2F2">
 	<meta name="msapplication-TileColor" content="#A2B2F2">
-	
+
 	<meta name="theme-color" content="#A2B2F2">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
@@ -44,8 +44,8 @@
 
 	<!--<script src="./public/js/jquery-3.1.0.min.js"></script>-->
 	<script src="./public/js/jquery-1.12.1.min.js"></script>
-	
-	
+
+
 	<script src="./public/js/bootstrap.min.js"></script>
 	<script src="./public/js/swiper.jquery.min.js"></script>
     <script src='./public/js/ractive.js'></script>
@@ -57,7 +57,7 @@
 
 <div class="layout" id="top">
 
-	
+
 
 	<aside class="sidebar">
 		<div class="sidebar__inner">
@@ -187,7 +187,7 @@
 
 
 
-	
+
 
 	<main class="content">
 		<div class="content__sider">
@@ -197,16 +197,16 @@
 		<div class="row">
 			<div class="col-md-12">
 				<ol class="breadcrumb">
-					<li class="active"><a href="6-0.html">Module 6 | Update your app</a></li>
+					<li class="active"><a href="6-0.html">关卡6 | 更新你的应用</a></li>
 				</ol>
 			</div>
 		</div>
 
-		<h1>Performing a rolling update for an app</h1>
+		<h1>实现应用的滚动更新</h1>
 
 		<div class="row">
 			<div class="col-md-12 text-left">
-				<a class="btn btn-default" href="6-0.html" role="button"><span class="btn__prev">‹</span> Back</a>
+				<a class="btn btn-default" href="6-0.html" role="button"><span class="btn__prev">‹</span> 返回</a>
 			</div>
 		</div>
 
@@ -215,23 +215,23 @@
 
 		<div class="row">
 			<div class="col-md-8">
-			<p>Users expect applications to be available all the time and developers are expected to deploy new versions of them several times a day. In Kubernetes this is done with rolling updates. <b>Rolling updates</b> allows Deployments to occur with zero downtime by incrementally updating Pods instances with new ones. The new Pods will be scheduled on Nodes with available resources.</p>
+			<p>用户希望应用一直是可用的，开发者则需要每天部署应用的新版本，Kubernetes是通过滚动更新实现的。<b>滚动更新</b>让Deployment能够在零宕机的情况下，用新的Pod，增量地更新Pod实例，新的Pod会被编排在有足够资源的Node中。</p>
 
-			<p>In the previous module we scaled our application to run multiple instances. This is a requirement for performing updates without affecting application availability. By default, the maximum number of Pods that can be unavailable during the update and the maximum number of new Pods that can be created, is one. Both options can be configured to either numbers or percentages (of Pods). 
-			In Kubernetes, updates are versioned and any Deployment update can be reverted to a previously (stable) version.</p>
+			<p>在上一个关卡中，我们的应用被扩展了，运行了多个实例，在更新时就要注意不能影响到应用的可用性。默认情况下，更新期间可用Pod的最大数量，和可被创建的新Pod的最大数量是一样的，2个都可以用来配置Pod的数量或百分比。
+			在Kubernetes中，更新都被标注了版本，任何Deployment的更新都可以回滚到上一个稳定版本。</p>
 
 
 
 			</div>
 			<div class="col-md-4">
 				<div class="content__box content__box_lined">
-					<h3>Summary:</h3>
+					<h3>总结：</h3>
 					<ul>
-						<li>Updating an app</li>
+						<li>更新应用</li>
 					</ul>
 				</div>
 				<div class="content__box content__box_fill">
-					<p><i>Rolling updates allows Deployments update with zero downtime by incrementally updating Pods instances with new ones. </i></p>
+					<p><i>滚动更新让Deployment能够在零宕机的情况下，用新的Pod，增量地更新Pod实例。</i></p>
 				</div>
 			</div>
 		</div>
@@ -239,7 +239,7 @@
 
 		<div class="row">
 			<div class="col-md-8">
-				<h2 style="color: #3771e3;">Rolling updates overview</h2>
+				<h2 style="color: #3771e3;">滚动更新概览</h2>
 			</div>
 		</div>
 		<div class="row">
@@ -271,10 +271,10 @@
 					  </div>
 
 					  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-						<span class="sr-only ">Previous</span>
+						<span class="sr-only ">返回</span>
 					  </a>
 					  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-						<span class="sr-only">Next</span>
+						<span class="sr-only">下一步</span>
 					  </a>
 
 					</div>
@@ -285,20 +285,20 @@
 		<div class="row">
 			<div class="col-md-8">
 
-				<p>Similar to application Scaling, If a Deployment is exposed publicly, the Service will load-balance the traffic only to available Pods during the update. An available Pod is an instance that is available to the users of the application.</p>
+				<p>和应用扩缩容类似，如果一个Deployment可以对外可访问，在更新期间，Service只会将流量分配给可用的Pod。对用户来说，一个可用的Pod就是一个可访问的应用实例。</p>
 
-				<p>Rolling updates allow the following actions:</p> 
+				<p>滚动更新可以实现以下场景：</p>
 				<ul>
-					<li>Promote an application from one environment to another (via container image updates)</li>
-					<li>Rollback to previous versions</li>
-					<li>Continuous Integration and Continuous Delivery of applications with zero downtime</li>
+					<li>将应用从一个环境迁移到另一个（通过容器镜像更新实现）</li>
+					<li>回滚到上一个版本</li>
+					<li>零宕机实现应用持续集成和持续交付</li>
 
 				</ul>
-				
+
 			</div>
 			<div class="col-md-4">
 				<div class="content__box content__box_fill">
-					<p><i>If a Deployment is exposed publicly, the Service will load-balance the traffic only to available Pods during the update. </i></p>
+					<p><i>如果一个Deployment可以对外可访问，在更新期间，Service只会将流量分配给可用的Pod。 </i></p>
 				</div>
 			</div>
 		</div>
@@ -307,14 +307,14 @@
 
 		<div class="row">
 			<div class="col-md-8">
-				<p> In the following interactive tutorial we’ll update our application to a new version, and also perform a rollback.</p>	
+				<p> 在下面的实战演练中，我们会练习更新应用到新版本，并实现应用的回滚。</p>
 			</div>
 		</div>
 		<br>
 
 		<div class="row">
 			<div class="col-md-12">
-				<a class="btn btn-lg btn-success" href="6-2.html" role="button">Start Interactive Tutorial <span class="btn__next">›</span></a>
+				<a class="btn btn-lg btn-success" href="6-2.html" role="button">实战演练 <span class="btn__next">›</span></a>
 			</div>
 		</div>
 
@@ -323,7 +323,7 @@
 
 
 
-	
+
 		<!-- header start -->
 <footer class="footer" role="contentinfo">
 	<div class="footer__content">
@@ -365,7 +365,7 @@
 	</div>
 </footer>
 <!-- header finish --> <a class="scrolltop" href="#top"></a>
-	
+
 
 </div>
 
