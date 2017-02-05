@@ -78,48 +78,48 @@ $(function() {
 	}]
 
 	var quizDataM2 = [{
-		text	: 'Kubectl is:',
+		text	: 'Kubectl 是:',
 		answers : [{
-			text		: 'A tool used to start a Kubernetes cluster on a local machine',
-			note		: 'You can start a Kubernetes cluster with minikube',
+			text		: '用于在本机启动 Kubernetes 集群的一个工具',
+			note		: 'minikube才是干这事',
 			isCorrect	: false
 		},{
-			text		: 'A type of Kubernetes host',
-			note		: 'The k8s hosts are master and nodes',
+			text		: '一种 Kubernetes 的节点类型',
+			note		: 'k8s的节点类型只有master和node',
 			isCorrect	: false
 		},{
-			text		: 'the Kubernetes cli tool',
-			note		: 'kubectl is the Kubernetes cli',
+			text		: '一个 Kubernetes cli 工具',
+			note		: 'Bingo!',
 			isCorrect	: true
 		}],
 	},{
-		text	: 'What is a Deployment?',
+		text	: 'Deployments是个什么东东？',
 		answers : [{
-			text		: 'A type of container',
-			note		: 'Deployments allow application containers  to be redeployed in case of failure',
+			text		: '一种容器',
+			note		: 'Deployments允许应用容器重新部署（比如失败了）',
 			isCorrect	: false
 		},{
-			text		: 'A Deployment is responsible for managing the desired state of your applications',
-			note		: 'A Deployment is responsible for creating and updating instances of your application',
+			text		: 'Deployment会负责管理你程序的状态',
+			note		: 'Deployment会负责创建和更新你应用的实例',
 			isCorrect	: true
 		},{
-			text		: 'A type of Kubernetes host',
-			note		: 'The Kubernetes hosts are Master and Nodes. Deployments will run on Nodes',
+			text		: '一种 Kubernetes 的节点类型',
+			note		: 'k8s的节点类型只有master和node， Deployments是部署在node中',
 			isCorrect	: false
 		}],
 	},{
-		text	: 'What command would you use to create a Deployment?',
+		text	: '用什么命令来创建一个Deployment?',
 		answers : [{
 			text		: '"kubectl get deployments"',
-			note		: 'This get command will only list the existing Deployments',
+			note		: '此命令用来展示已经存在的Deployments',
 			isCorrect	: false
 		},{
 			text		: '"kubectl get nodes"',
-			note		: 'This get command will only list the available Nodes where you can deploy applications',
+			note		: '此命令用来展示可用的节点',
 			isCorrect	: false
 		},{
 			text		: '"kubectl run"',
-			note		: 'run is the command that will create a new deployment',
+			note		: '就是它了！',
 			isCorrect	: true
 		}],
 	}]

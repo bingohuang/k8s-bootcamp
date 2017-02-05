@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Kubernetes Bootcamp</title>
+	<title>K8S训练营</title>
 	<meta name="description" content="K8S">
 	<meta name="keywords" content="K8S Keywords">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -16,20 +16,20 @@
 	<meta property="og:description" content="K8S">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="@empty">
-	<meta name="twitter:title" content="K8S - Bootcamp Overview">
+	<meta name="twitter:title" content="K8S - 训练营">
 	<meta name="twitter:description" content="K8S">
 	<meta name="twitter:creator" content="@k8s">
 	<meta name="twitter:image:src" content="./public/uploads/soc_index.jpg">
 	<meta name="twitter:domain" content="index.html">
-	<meta itemprop="name" content="K8S - Bootcamp Overview">
+	<meta itemprop="name" content="K8S - 训练营">
 	<meta itemprop="description" content="K8S">
 	<meta itemprop="image" content="./public/uploads/soc_index.jpg">
 
-	
-	<link rel="manifest" href="./manifest.json?v=1470121828992">
-	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1470121828992" color="#A2B2F2">
+
+	<link rel="manifest" href="./manifest.json?v=1470121828969">
+	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1470121828969" color="#A2B2F2">
 	<meta name="msapplication-TileColor" content="#A2B2F2">
-	
+
 	<meta name="theme-color" content="#A2B2F2">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
@@ -37,18 +37,23 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="apple-touch-fullscreen" content="yes">
 
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900,300,100' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href='./public/css/font-roboto.css' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="./public/css/font-awesome.min.css">
 	<link href="./public/css/swiper.min.css" rel="stylesheet">
 	<link href="./public/css/styles.css" rel="stylesheet">
 
 	<!--<script src="./public/js/jquery-3.1.0.min.js"></script>-->
 	<script src="./public/js/jquery-1.12.1.min.js"></script>
-	<script src="https://katacoda.com/embed.js"></script>
-	
+	<script>
+		$(function(){
+            $(".includedFooter").load("footer.html");
+		});
+	</script>
+	<script src="./public/js/embed.js"></script>
+
 	<script src="./public/js/bootstrap.min.js"></script>
 	<script src="./public/js/swiper.jquery.min.js"></script>
-    <script src='./public/js/ractive.js'></script>
+	<script src='./public/js/ractive.js'></script>
 	<script src="./public/js/common.js"></script>
 
 </head>
@@ -57,133 +62,96 @@
 
 <div class="layout" id="top">
 
-	
-
+	<!-- aside start -->
 	<aside class="sidebar">
 		<div class="sidebar__inner">
-
 			<header class="header">
-	<a class="header__site" href="index.html">
-		<img class="header__logo" src="./public/images/logo.svg?v=1470121828992" alt="">
-		<img class="header__logo-mobile" src="./public/images/logo_2.svg?v=1470121828992" alt="">
-		<span class="header__name">Bootcamp</span>
-	</a>
-	<div class="header__sider">
-		<div class="header__burger"></div>
-	</div>
-</header>
+				<a class="header__site" href="index.html">
+					<img class="header__logo" src="./public/images/logo.svg?v=1470121829149" alt="">
+					<img class="header__logo-mobile" src="./public/images/logo_2.svg?v=1470121829149" alt="">
+					<span class="header__name">K8S训练营</span>
+				</a>
+				<div class="header__sider">
+					<div class="header__burger"></div>
+				</div>
+			</header>
 
 			<ul class="nav">
 				<li class="marked">
 					<a href="index.html">
 						<span class="sidebar__ico"></span>
-						Bootcamp Overview
+						训练营总览
 					</a>
 				</li>
 				<li class="marked">
 					<a href="1-0.html">
 						<span class="sidebar__ico"></span>
-						1. Create a cluster
+						1. 集群创建
 					</a>
 				</li>
 				<li class="sidebar__subnav open marked">
 					<a href="2-0.html">
 						<span class="sidebar__ico"></span>
-						2. Deploy an app
+						2. 应用部署
 					</a>
 					<ul class="nav">
 						<li class="marked">
 							<a href="2-1.html">
 								<span class="sidebar__ico"></span>
-								Your first app deployment
+								技能学习
 							</a>
 						</li>
 						<li class="marked active">
 							<a href="2-2.html">
 								<span class="sidebar__ico"></span>
-								Try interactively
+								实战演练
 							</a>
 						</li>
 						<li>
 							<a href="2-3.html">
 								<span class="sidebar__ico"></span>
-								Quiz
+								过关测试
 							</a>
 						</li>
 					</ul>
 				</li>
-				<li>
+				<li class="sidebar__subnav">
 					<a href="3-0.html">
 						<span class="sidebar__ico"></span>
-						3. Explore your app
+						3. 应用探索
 					</a>
 				</li>
-				<li>
+				<li class="sidebar__subnav">
 					<a href="4-0.html">
 						<span class="sidebar__ico"></span>
-						4. Expose your app publicly
+						4. 应用发布
 					</a>
 				</li>
-				<li>
+				<li class="sidebar__subnav">
 					<a href="5-0.html">
 						<span class="sidebar__ico"></span>
-						5. Scale up your app
+						5. 应用扩容
 					</a>
 				</li>
 				<li class="sidebar__subnav">
 					<a href="6-0.html">
 						<span class="sidebar__ico"></span>
-						6. Update your app
+						6. 应用升级
 					</a>
 				</li>
 			</ul>
 
-			<!-- header start -->
-<footer class="footer" role="contentinfo">
-	<div class="footer__content">
-		<ul class="footer__social">
-			<li class="footer__social-item">
-				<a class="footer__network" href="https://twitter.com/kubernetesio" target="_blank">
-					<i class="fa fa-twitter" aria-hidden="true"></i>
-				</a>
-			</li>
-			<li class="footer__social-item">
-				<a class="footer__network" href="https://github.com/kubernetes/kubernetes" target="_blank">
-					<i class="fa fa-github" aria-hidden="true"></i>
-				</a>
-			</li>
-			<li class="footer__social-item">
-				<a class="footer__network" href="https://groups.google.com/forum/#!forum/google-containers" target="_blank">
-					<i class="fa fa-envelope" aria-hidden="true"></i>
-				</a>
-			</li>
-		</ul>
-
-		<ul class="footer__menu">
-			<li class="footer__item">
-				<a class="footer__link" href="http://kubernetes.io/">Kubernetes</a>
-			</li>
-			<li class="footer__item">
-				<a class="footer__link" href="http://kubernetes.io/docs/">View Documentation</a>
-			</li>
-			<li class="footer__item">
-				<a class="footer__link" href="https://github.com/kubernetes/kubernetes">Github</a>
-			</li>
-		</ul>
-
-		<div class="footer__copyright">
-			<b>© 2016 Kubernetes</b><br>
-			developed and designed by<br>
-			<a href="http://container-solutions.com/" target="_blank">Container Solutions</a> & <a href="http://www.remembertoplay.co" target="_blank">Remember to Play</a>
-		</div>
-	</div>
-</footer>
-<!-- header finish --> <a class="scrolltop" href="#top"></a>
-
+			<!-- footer start -->
+			<footer class="footer" role="contentinfo">
+				<div class="includedFooter"></div>
+			</footer>
+			<a class="scrolltop" href="#top"></a>
+			<!-- footer end -->
 		</div>
 	</aside>
+	<!-- aside end -->
 
-
+	<!-- content start -->
 	<main class="content">
 		<div class="content__sider">
 			<a class="content__trigger" href="#" role="button"></a>
@@ -197,17 +165,17 @@
 			</div>
 		</div>
 
-		<h1>Your first application deployment</h1>
+		<h1>实战演练：部署你的第一个应用</h1>
 
 		<div class="row">
 			<div class="col-md-12 text-left">
-				<a class="btn btn-default" href="2-1.html" role="button"><span class="btn__prev">‹</span> Back</a>
+				<a class="btn btn-default" href="2-1.html" role="button"><span class="btn__prev">‹</span> 后退</a>
 			</div>
 		</div>
 		<br>
 		<div class="katacoda">
 			<div class="katacoda__alert">
-				To interact with the Terminal, please use the desktop/tablet version
+				实战演练仅支持PC浏览器
 			</div>
 			<div class="katacoda__box" id="inline-terminal-1"  data-katacoda-id="kubernetes-bootcamp/7" data-katacoda-color="326de6" data-katacoda-secondary="273d6d" data-katacoda-hideintro="false" data-katacoda-font="Roboto" data-katacoda-fontheader="Roboto Slab" data-katacoda-prompt="Kubernetes Bootcamp Terminal" style="height: 600px;">
 			</div>
@@ -215,60 +183,22 @@
 		<div class="row">
 			<div class="col-md-12">
         <p>
-          Finished? Test your knowledge in the quiz.
+			完成了？来个过关测试吧！
         </p>
-				<a class="btn btn-lg btn-success" href="2-3.html" role="button">Module 2 quiz<span class="btn__next">›</span></a>
+				<a class="btn btn-lg btn-success" href="2-3.html" role="button">过关测试<span class="btn__next">›</span></a>
 			</div>
 		</div>
 
 	</main>
+	<!-- content end -->
 
+	<!-- footer start -->
+	<footer class="footer" role="contentinfo">
+		<div class="includedFooter"></div>
+	</footer>
 
-
-
-	
-		<!-- header start -->
-<footer class="footer" role="contentinfo">
-	<div class="footer__content">
-		<ul class="footer__social">
-			<li class="footer__social-item">
-				<a class="footer__network" href="https://twitter.com/kubernetesio" target="_blank">
-					<i class="fa fa-twitter" aria-hidden="true"></i>
-				</a>
-			</li>
-			<li class="footer__social-item">
-				<a class="footer__network" href="https://github.com/kubernetes/kubernetes" target="_blank">
-					<i class="fa fa-github" aria-hidden="true"></i>
-				</a>
-			</li>
-			<li class="footer__social-item">
-				<a class="footer__network" href="https://groups.google.com/forum/#!forum/google-containers" target="_blank">
-					<i class="fa fa-envelope" aria-hidden="true"></i>
-				</a>
-			</li>
-		</ul>
-
-		<ul class="footer__menu">
-			<li class="footer__item">
-				<a class="footer__link" href="http://kubernetes.io/">Kubernetes</a>
-			</li>
-			<li class="footer__item">
-				<a class="footer__link" href="http://kubernetes.io/docs/">View Documentation</a>
-			</li>
-			<li class="footer__item">
-				<a class="footer__link" href="https://github.com/kubernetes/kubernetes">Github</a>
-			</li>
-		</ul>
-
-		<div class="footer__copyright">
-			<b>© 2016 Kubernetes</b><br>
-			developed and designed by<br>
-			<a href="http://container-solutions.com/" target="_blank">Container Solutions</a> & <a href="http://www.remembertoplay.co" target="_blank">Remember to Play</a>
-		</div>
-	</div>
-</footer>
-<!-- header finish --> <a class="scrolltop" href="#top"></a>
-	
+	<a class="scrolltop" href="#top"></a>
+	<!-- footer end -->
 
 </div>
 

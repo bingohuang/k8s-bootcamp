@@ -10117,7 +10117,7 @@ p a:hover
 }
 .quiz__var_open.quiz__var_true .quiz__box:after
 {
-    content: 'Correct !';
+    content: '正确 !';
 
     color: #19eb7d;
 }
