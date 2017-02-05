@@ -4,12 +4,12 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Kubernetes Bootcamp</title>
+	<title>K8S训练营</title>
 	<meta name="description" content="K8S">
 	<meta name="keywords" content="K8S Keywords">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<meta property="og:title" content="K8S - Bootcamp Overview">
+	<meta property="og:title" content="K8S - 训练营">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="index.html">
 	<meta property="og:image" content="./public/uploads/soc_index.jpg">
@@ -25,11 +25,11 @@
 	<meta itemprop="description" content="K8S">
 	<meta itemprop="image" content="./public/uploads/soc_index.jpg">
 
-	
+
 	<link rel="manifest" href="./manifest.json?v=1470121828969">
 	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1470121828969" color="#A2B2F2">
 	<meta name="msapplication-TileColor" content="#A2B2F2">
-	
+
 	<meta name="theme-color" content="#A2B2F2">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
@@ -44,8 +44,8 @@
 
 	<!--<script src="./public/js/jquery-3.1.0.min.js"></script>-->
 	<script src="./public/js/jquery-1.12.1.min.js"></script>
-	
-	
+
+
 	<script src="./public/js/bootstrap.min.js"></script>
 	<script src="./public/js/swiper.jquery.min.js"></script>
     <script src='./public/js/ractive.js'></script>
@@ -57,7 +57,7 @@
 
 <div class="layout" id="top">
 
-	
+
 
 	<aside class="sidebar">
 		<div class="sidebar__inner">
@@ -185,7 +185,7 @@
 
 
 
-	
+
 
 	<main class="content">
 		<div class="content__sider">
@@ -195,16 +195,16 @@
 		<div class="row">
 			<div class="col-md-12">
 				<ol class="breadcrumb">
-					<li class="active"><a href="2-0.html">Module 2 | Deploy an app</a></li>
+					<li class="active"><a href="2-0.html">关卡2 | 部署一个应用</a></li>
 				</ol>
 			</div>
 		</div>
-		
-		<h1>Your first application deployment</h1>
+
+		<h1>应用部署初体验</h1>
 
 		<div class="row">
 			<div class="col-md-12 text-left">
-				<a class="btn btn-default" href="2-0.html" role="button"><span class="btn__prev">‹</span> Back</a>
+				<a class="btn btn-default" href="2-0.html" role="button"><span class="btn__prev">‹</span> 返回</a>
 			</div>
 		</div>
 
@@ -214,15 +214,15 @@
 		<div class="row">
 			<div class="col-md-8">
 				<p>
-				Once you have a running Kubernetes cluster, you can deploy your containerized applications on top of it. To do so, you create a Kubernetes <b>Deployment</b>. The Deployment is responsible for creating and updating instances of your application. Once you've created a Deployment, the Kubernetes master schedules the application instances that the Deployment creates onto individual Nodes in the cluster.
+				一旦你的Kubernetes集群运行起来，就可以在上面添加容器化的应用了。首先，要创建一个Kubernetes<b>Deployment</b>。这个Deployment负责创建和更新应用的实例，只要你创建了Deployment，Kubernetes的master就可以调度这个Deployment在集群中单个节点上创建的应用实例。
 				</p>
 
-				<p>Once the application instances are created, a Kubernetes Deployment Controller continuously monitors those instances. The Deployment controller replaces an instance if the Node hosting it goes down or it is deleted. <b>This provides a self-healing mechanism to address machine failure or maintenance.</b></p>
+				<p>一旦应用实例被创建出来，Kubernetes的Deployment Controller就会持续地监控这些实例。如果托管实例的Node宕掉或被删除，Deployment Controller会替换上一个新的实例。<b>这提供了一种自我修复机制，来解决机器宕机或维护的问题。</b></p>
 
-				<p>In a pre-orchestration world, installation scripts would often be used to start applications, but they did not allow recovery from machine failure.  By both creating your application instances and keeping them running across Nodes, Kubernetes Deployments provide a fundamentally different approach to application management. </p>
+				<p>在预编排的世界中，安装脚本通常被用来启动应用，但它们不允许从机器宕机中恢复。通过创建应用实例，并保证其在Node之间保持运行，Kubernetes的Deployment提供了一种完全不同的应用管理机制。</p>
 
-				
-				
+
+
 			</div>
 
 			<div class="col-md-4">
@@ -235,7 +235,7 @@
 				</div>
 				<div class="content__box content__box_fill">
 					<p><i>
-						A Deployment is responsible for creating and updating instances of your application
+						Deployment负责创建和更新应用的实例
 					</i></p>
 				</div>
 			</div>
@@ -244,7 +244,7 @@
 
 		<div class="row">
 			<div class="col-md-8">
-				<h2 style="color: #3771e3;">Deploying your first app on Kubernetes</h2>
+				<h2 style="color: #3771e3;">部署你在Kubernetes上的第一个应用</h2>
 			</div>
 		</div>
 
@@ -258,34 +258,34 @@
 		<div class="row">
 			<div class="col-md-8">
 
-                <p>You can create and manage a Deployment by using the Kubernetes command line interface, <b>Kubectl</b>. Kubectl uses the Kubernetes API to interact with the cluster. In this module, you'll learn the most common Kubectl commands needed to create Deployments that run your applications on a Kubernetes cluster.</p>
+                <p>可以通过Kubernetes的命令行接口（Command Line Interface）<b>Kubectl</b>来创建和管理一个Deployment。Kubectl通过Kubernetes API和集群进行交互。在下面的示例中，你会学到最常用的Kubectl命令——在一个Kubernetes集群中创建Deployment，去运行你的应用。</p>
 
-				<p>When you create a Deployment, you'll need to specify the container image for your application and the number of replicas that you want to run. You can change that information later by updating your Deployment; Modules <a href="5-0.html">5</a> and <a href="5-0.html">6</a> of the bootcamp discuss how you can update your Deployments.</p>
+				<p>在创建一个Deployment的时候，你需要为应用配置相应的容器镜像，以及你想要运行的副本个数，当然后续你也可以通过更新Deployment来更改这些信息。训练营的<a href="5-0.html">关卡5</a>和<a href="6-0.html">关卡6</a>讨论了如何更新Deployment。</p>
 
-				
 
-				
+
+
 			</div>
 			<div class="col-md-4">
 				<div class="content__box content__box_fill">
-					<p><i> Applications need to be packaged into one of the supported container formats in order to be deployed on Kubernetes </i></p>
+					<p><i> 为了让应用能部署在Kubernetes上，必须要将其打包在特定的容器格式中 </i></p>
 				</div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-md-8">
-				<p>For our first Deployment, we’ll use a <a href="https://nodejs.org">NodeJS</a> application packaged in a Docker container. The source code and the Dockerfile are available in the <a href="https://github.com/kubernetes/kubernetes-bootcamp">GitHub respository</a> for the Kubernetes Bootcamp.</p>
-				
-				<p>Now that you know what Deployments are, let’s go to the online tutorial and deploy our first app!</p>
-			
+				<p>在本教程中，我们以一个用Docker容器打包的<a href="https://nodejs.org">NodeJS</a>应用为例，具体的源代码和Dockerfile可以在K8S训练营的<a href="https://github.com/kubernetes/kubernetes-bootcamp">GitHub respository</a>中找到。</p>
+
+				<p>下面让我们进入在线教程，来部署第一个应用吧！</p>
+
 			</div>
 		</div>
 		<br>
 
 		<div class="row">
 			<div class="col-md-12">
-				<a class="btn btn-lg btn-success" href="2-2.html" role="button">Start Interactive Tutorial <span class="btn__next">›</span></a>
+				<a class="btn btn-lg btn-success" href="2-2.html" role="button">线上实践<span class="btn__next">›</span></a>
 			</div>
 		</div>
 
@@ -294,7 +294,7 @@
 
 
 
-	
+
 		<!-- header start -->
 <footer class="footer" role="contentinfo">
 	<div class="footer__content">
@@ -336,7 +336,7 @@
 	</div>
 </footer>
 <!-- header finish --> <a class="scrolltop" href="#top"></a>
-	
+
 
 </div>
 
