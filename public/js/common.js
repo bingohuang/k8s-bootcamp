@@ -125,189 +125,189 @@ $(function() {
 	}]
 
 		var quizDataM3 = [{
-		text	: 'What is a Pod?',
+		text	: '什么是Pod',
 		answers : [{
-			text		: 'A host machine where containers are deployed',
-			note		: 'The machines where we deploy Pods are called Nodes',
+			text		: '上面部署着容器的主机',
+			note		: '我们部署Pod的机器被称为Node',
 			isCorrect	: false
 		},{
-			text		: 'A Kubernetes primitive responsible for deploying and scheduling application containers',
-			note		: 'A Deployment is responsible for creating and updating the instances of your application containers',
+			text		: 'Kubernetes的最小单位，负责部署和编排应用容器',
+			note		: '一个Deployment，负责创建和更新应用容器的实例',
 			isCorrect	: false
 		},{
-			text		: 'A group of one or more application containers that include shared volume and IP address',
-			note		: 'In Kubernetes all containers are deployed inside Pods',
+			text		: '一组应用容器，其中包含了共享的volume和IP地址',
+			note		: 'Kubernetes的所有容器都被部署在Pod中',
 			isCorrect	: true
 		}],
 	},{
-		text	: 'What is a Node?',
+		text	: 'Node是什么？',
 		answers : [{
-			text		: 'A group of one or more containers deployed on Kubernetes',
-			note		: 'A Pod is a group of one or more containers deployed on a Node',
+			text		: '一组部署在Kubernetes上的容器',
+			note		: '一个Pod是一组部署在Node上的容器',
 			isCorrect	: false
 		},{
-			text		: 'A Node is a worker machine in Kubernetes',
-			note		: 'A node can be VM or physical machines',
+			text		: 'Node在Kubernetes中是一个工作机器',
+			note		: '虚拟机或是物理机都可以作为Node',
 			isCorrect	: true
 		},{
-			text		: 'A Node is a machine that coordinates the cluster',
-			note		: 'Masters are the machines that are coordinating the Kubernetes cluster',
+			text		: 'Node是协调集群工作的机器',
+			note		: 'Master是协调Kubernetes集群工作的机器',
 			isCorrect	: false
 		}],
 	},{
-		text	: 'What would be  the result of this command: “kubectl exec -ti my_pod_name bash”',
+		text	: '“kubectl exec -ti my_pod_name bash”这行命令的运行结果是什么？',
 		answers : [{
-			text		: 'Get the list of Pods',
-			note		: 'To get the list of Pods you need to run the "get pods" command',
+			text		: '获取Pod的列表',
+			note		: '获取运行"get pods"命令所需的Pod列表',
 			isCorrect	: false
 		},{
-			text		: 'Open a console on the first container inside the my_pod_name',
-			note		: 'Remember that you need to specify the container name in case you have multiple containers on the Pod',
+			text		: '在my_pod_name的第一个容器中打开一个控制台',
+			note		: '如果在这个Pod上有多个容器，不要忘记指定容器的name',
 			isCorrect	: true
 		},{
-			text		: 'Show on what node the pod called my_pod_name is running',
-			note		: 'To find out on what node is your Pod running you can use the "describe pod" command',
+			text		: '展示my_pod_name这个Pod运行在哪个Node上',
+			note		: '"describe pod"命令可以显示Pod所在的Node',
 			isCorrect	: false
 		}],
 	}]
 
 	var quizDataM4 = [{
-		text	: 'What is a Service?',
+		text	: 'Service是什么？',
 		answers : [{
-			text		: 'A co-located and co-scheduled group of one or more containers that share volume and an IP address',
-			note		: 'This is the definition of a Pod',
+			text		: '一组位置邻近、共同编排、共享volume和IP地址的容器',
+			note		: '这是Pod的定义',
 			isCorrect	: false
 		},{
-			text		: 'A Service is responsible for creating and updating instances of your containerized applications',
-			note		: 'Deployments are managing the lifecycle of your deployed applications',
+			text		: 'Service负责创建和更新容器化应用的实例',
+			note		: 'Deployment管理着被部署容器的生命周期',
 			isCorrect	: false
 		},{
-			text		: 'A Kubernetes Service is an abstraction layer which defines a logical set of Pods',
-			note		: 'You can use Services to group your Pods',
+			text		: 'Kubernetes的Service是一个抽象层，定义了Pod的抽象集合',
+			note		: '你可以使用Service对Pod进行分组',
 			isCorrect	: true
 		}],
 	},{
-		text	: 'How can you create a Service?',
+		text	: '如何创建一个Service？',
 		answers : [{
-			text		: 'With "kubectl expose"',
-			note		: 'Expose is the command you’ll use to expose your Deployments to the outside world',
+			text		: '使用"kubectl expose"命令',
+			note		: '使用expose命令可以将Deployment暴露给外部访问',
 			isCorrect	: true
 		},{
-			text		: 'With "kubectl describe"',
-			note		: 'This command allows you to view in detail resources configuration',
+			text		: '使用"kubectl describe"命令',
+			note		: '这个命令用来查看资源配置的详情',
 			isCorrect	: false
 		},{
-			text		: 'With "kubectl proxy"',
-			note		: 'This is an alternative to exposing the Service, but it will create a route only between your terminal and the cluster',
+			text		: '使用"kubectl proxy"命令',
+			note		: '这个命令也可以使Service可以对外访问，但只会在终端和集群之间创建一个路由',
 			isCorrect	: false
 		}],
 	},{
-		text	: 'What is a Label in Kubernetes?',
+		text	: '在Kubernetes中什么是Label？',
 		answers : [{
-			text		: 'A way to expose traffic',
-			note		: 'To expose your Pods you would use a Service',
+			text		: '一种向外输出流量的方式',
+			note		: 'Service才是让Pod可以对外访问的方式',
 			isCorrect	: false
 		},{
-			text		: 'A type of Deployment',
-			note		: 'Deployments generate automatically labels for deployed Pods',
+			text		: '一种Deployment的方式',
+			note		: 'Deployment为部署的Pod自动生成label',
 			isCorrect	: false
 		},{
-			text		: 'A way to group related things using key/value pairs',
-			note		: 'You can use labels to group resources that are related (like: web servers, databases)',
+			text		: '通过key/value键值对组合相关的资源',
+			note		: '可以使用label去组合相关的资源（比如web服务器，数据库）',
 			isCorrect	: true
 		}],
 	}]
 
 	var quizDataM5 = [{
-		text	: 'What is the link between Scaling and Deployments?',
+		text	: '扩/缩容和Deployment之间是什么关系？',
 		answers : [{
-			text		: 'Scaling changes the number of replicas in a Deployment',
-			note		: 'Scaling is accomplished by changing the number of replicas in a Deployment',
+			text		: '扩/缩容可以更改Deployment中的副本数量',
+			note		: '扩/缩容可以通过改变Deployment中的副本数量来实现',
 			isCorrect	: true
 		},{
-			text		: 'Scaling exposes a Deployment to external network traffic',
-			note		: 'A Service will expose Deployments to external network traffic',
+			text		: '扩/缩容将Deployment暴露给外部的网络流量',
+			note		: '是Service将Deployment暴露给外部的网络流量',
 			isCorrect	: false
 		},{
-			text		: 'Scaling creates a new Service',
-			note		: 'Scaling will not create a new Service. An Service will load-balance network traffic in case of scaling',
+			text		: '扩/缩容创建一个新的Service',
+			note		: '扩/缩容不会创建新的Service，Service会在扩/缩容的时候提供网络流量负载均衡的功能',
 			isCorrect	: false
 		}],
 	},{
-		text	: 'What parameter allows "kubectl run" command to scale Deployments ?',
+		text	: '"kubectl run"命令中，哪个参数设置可以扩展Deployment？',
 		answers : [{
 			text		: '--image',
-			note		: 'The image parameter represents the URL to your container image',
+			note		: 'image参数代表容器镜像的地址',
 			isCorrect	: false
 		},{
 			text		: '--label',
-			note		: 'The label applies specific key/value to the deployed Pods',
+			note		: 'label参数为Pod设置key/value值',
 			isCorrect	: false
 		},{
 			text		: '--replicas',
-			note		: 'The replicas parameter enables the deployment of multiple replicas',
+			note		: 'replicas参数可以使能多副本的部署',
 			isCorrect	: true
 		}],
 	},{
-		text	: 'What are the  possible states of a Pod replica?',
+		text	: '一个Pod副本可能的状态都有哪些？',
 		answers : [{
-			text		: 'DESIRED, UP-TO-DATE or AVAILABLE',
-			note		: 'This does not cover how many replicas are running now',
+			text		: 'DESIRED，UP-TO-DATE和AVAILABLE',
+			note		: '未包含目前运行的副本数',
 			isCorrect	: false
 		},{
-			text		: 'DESIRED, CURRENT or UP-TO-DATE',
-			note		: 'This doesn’t cover how many replicas can be accessed by the users of the app',
+			text		: 'DESIRED，CURRENT和UP-TO-DATE',
+			note		: '未包含用户可访问的副本数',
 			isCorrect	: false
 		},{
-			text		: 'DESIRED, CURRENT, UP-TO-DATE or AVAILABLE',
-			note		: 'All 4 are valid statuses for a replica',
+			text		: 'DESIRED，CURRENT，UP-TO-DATE和AVAILABLE',
+			note		: '这四种都是副本可能会呈现的状态',
 			isCorrect	: true
 		}],
 	}]
 
 	var quizDataM6 = [{
-		text	: 'What is the scope of a rolling update?',
+		text	: '滚动更新的范围是什么？',
 		answers : [{
-			text		: 'To update a Service',
-			note		: 'Services will distribute traffic to new deployed Pods',
+			text		: '更新一个Service',
+			note		: 'Services会给新部署的Pod分发流量',
 			isCorrect	: false
 		},{
-			text		: 'To update a Deployment',
-			note		: 'Rolling updates allows Deployments update with zero downtime by incrementally updating Pods instances with new ones',
+			text		: '更新一个Deployment',
+			note		: '滚动更新可以通过增量更新Pod实例，实现Deployment的零宕机更新',
 			isCorrect	: true
 		},{
-			text		: 'To scale an app',
-			note		: 'Rolling updates are performing incremental app updates',
+			text		: '扩展一个应用',
+			note		: '滚动更新的目的是实现应用的增量更新',
 			isCorrect	: false
 		}],
 	},{
-		text	: 'If a Deployment is exposed publicly, what happens with the network traffic during an update?',
+		text	: '如果一个Deployment可以对外访问，在应用更新时网络流量会发生哪些变化？',
 		answers : [{
-			text		: 'Is dropped',
-			note		: 'Rolling updates are rolled out with zero downtime',
+			text		: '不能访问',
+			note		: '滚动更新可以实现零宕机更新',
 			isCorrect	: false
 		},{
-			text		: 'Is load-balanced only to the old instances',
-			note		: 'Services are monitoring all the Pods of a Deployment',
+			text		: '网络流量会分发给旧的实例',
+			note		: 'Service监控着Deployment中所有的Pod',
 			isCorrect	: false
 		},{
-			text		: 'Is load-balanced only to available instances (old or new)',
-			note		: 'If a Deployment is exposed publicly, the Service will load-balance the traffic only to available Pods during the update',
+			text		: '流量会分发给可用的实例（包括新的和旧的）',
+			note		: '如果Deployment可以对外访问，在更新期间Service会将流量分发给可用的Pod',
 			isCorrect	: true
 		}],
 	},{
-		text	: 'What kubectl command can be used to do a Deployment update?',
+		text	: 'kubectl的哪个命令可以更新Deployment',
 		answers : [{
 			text		: '"kubectl set image"',
-			note		: '"set image" can be used to update the image of an container',
+			note		: '更新容器镜像时可以使用"set image"',
 			isCorrect	: true
 		},{
 			text		: '"kubectl rollout undo"',
-			note		: 'This is the command you would use to roll back  a deployment',
+			note		: '回滚一条Deployment更新时使用这行命令',
 			isCorrect	: false
 		},{
 			text		: '"kubectl rollout status"',
-			note		: 'This is the command you would use to view the current status of  a deployment',
+			note		: '使用这行命令可以查看Deployment目前的状态',
 			isCorrect	: false
 		}],
 	}]
@@ -410,5 +410,3 @@ $(function() {
 	})
 
 });
-
-
