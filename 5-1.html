@@ -178,16 +178,16 @@
 
 		<div class="row">
 			<div class="col-md-8">
-			<p>在之前的关卡中，我们创建了一个<a href="http://kubernetes.io/docs/user-guide/deployments/">Deployment</a>，然后通过一个<a href="http://kubernetes.io/docs/user-guide/services/">Service</a>让外部能够访问到它。之前这个Deployment在运行应用时，只创建了一个Pod，当流量过来时，我们要按需实现应用的扩缩容。</p>
+			<p>在之前的关卡中，我们创建了一个<a href="http://kubernetes.io/docs/user-guide/deployments/">Deployment</a>，然后通过一个<a href="http://kubernetes.io/docs/user-guide/services/">Service</a>让外部能够访问到它。之前这个Deployment在运行应用时，只创建了一个Pod，当流量过来时，我们要按需实现应用的扩/缩容。</p>
 
-			<p><b>扩缩容</b>是通过改变一个Deploument中实例的个数来实现的。</p>
+			<p><b>扩/缩容</b>是通过改变一个Deploument中实例的个数来实现的。</p>
 
 			</div>
 			<div class="col-md-4">
 				<div class="content__box content__box_lined">
 					<h3>总结：</h3>
 					<ul>
-						<li>Deployment的扩缩容</li>
+						<li>Deployment的扩/缩容</li>
 					</ul>
 				</div>
 				<div class="content__box content__box_fill">
@@ -199,7 +199,7 @@
 
 		<div class="row">
 			<div class="col-md-8">
-				<h2 style="color: #3771e3;">扩缩容概览</h2>
+				<h2 style="color: #3771e3;">扩/缩容概览</h2>
 			</div>
 		</div>
 
@@ -237,14 +237,14 @@
 		<div class="row">
 			<div class="col-md-8">
 
-				<p>扩展一个Deployment时，要保证新的Pod被创建和被编排到Node上时，有足够的资源，缩容时会相应地减少Pod的数量。Kubernetes还支持Pod的<a href="http://kubernetes.io/docs/user-guide/horizontal-pod-autoscaling/">自动扩展</a>但这超出了我们本次实战的范围。Kubernetes也支持缩容到0，这会停止Deployment中的所有Pod。</p>
+				<p>为了实现Deployment的扩展，要保证新的Pod被创建和被编排到Node上时，有足够的资源；缩容时会相应地减少Pod的数量。Kubernetes还支持Pod的<a href="http://kubernetes.io/docs/user-guide/horizontal-pod-autoscaling/">自动扩展</a>但这超出了我们本次实战的范围。Kubernetes也支持缩容到0，会停止Deployment中的所有Pod。</p>
 
-				<p>一个应用运行多个实例，必然要用到流量的分发机制。Service有一个内置的负载均衡器，可以将网络流量分发给Pod。Service会通过端口持续监控这些运行的Pod，从而保证流量只分发给可用的Pod。</p>
+				<p>一旦你的应用中运行了多个实例，必然要用到流量的分发机制。Service有一个内置的负载均衡器，可以将网络流量分发给Pod。Service会通过端口持续监控这些运行的Pod，从而保证流量只分发给可用的Pod。</p>
 
 			</div>
 			<div class="col-md-4">
 				<div class="content__box content__box_fill">
-					<p><i>扩缩容是通过改变一个Deploument中实例的个数来实现的。</i></p>
+					<p><i>扩/缩容是通过改变一个Deploument中实例的个数来实现的。</i></p>
 				</div>
 			</div>
 		</div>
@@ -253,7 +253,7 @@
 
 		<div class="row">
 			<div class="col-md-8">
-				<p>一旦你的应用中运行多个实例时，你还要能实现无宕机地更新它们，我们会在下个关卡中介绍这部分内容。现在让我们进入实战演练环节，来练习下如何实现应用的扩缩容吧！</p>
+				<p>如果你的应用中运行着多个实例，就要能实现无宕机地更新它们，我们会在下个关卡中介绍这部分内容。现在让我们进入实战演练环节，来练习下如何实现应用的扩/缩容吧！</p>
 			</div>
 		</div>
 		<br>

@@ -187,7 +187,7 @@
 				</ul>
 				<p>Pod是一种面向应用的“逻辑主机”，可以包含多个相对紧耦合的应用容器。比如，一个Pod里面可能包含了NodeJS的应用容器，以及另外的为NodeJS网络服务器提供数据的容器。同一个Pod内的容器共享一个IP地址和端口空间，通常被放在一起协同调度，并且运行在相同的Node上，共享上下文。</p>
 
-			<p>Pod是Kubernetes平台上最小的单元。当我们在Kubernetes上创建一个Deployment时，这个Deployment会创建Pod，及其内部的容器（而不是直接创建容器）。每个Pod对应着一个Node，直到这个Pod停止（跟进重启规则）或被删除之前，它都在这个Node上被编排。万一Node挂掉了，同一个Pod会被编排到集群中其它的可用Node上。</p>
+			<p>Pod是Kubernetes平台上最小的单元。当我们在Kubernetes上创建一个Deployment时，这个Deployment会创建Pod，及其内部的容器（而不是直接创建容器）。每个Pod对应着一个Node，直到这个Pod停止（跟据重启规则）或被删除之前，它都在这个Node上被编排。万一Node挂掉了，同一个Pod会被编排到集群中其它的可用Node上。</p>
 
 			</div>
 			<div class="col-md-4">
