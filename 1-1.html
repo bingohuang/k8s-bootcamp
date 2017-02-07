@@ -25,11 +25,11 @@
 	<meta itemprop="description" content="K8S">
 	<meta itemprop="image" content="./public/uploads/soc_index.jpg">
 
-	
+
 	<link rel="manifest" href="./manifest.json?v=1470121828969">
 	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1470121828969" color="#A2B2F2">
 	<meta name="msapplication-TileColor" content="#A2B2F2">
-	
+
 	<meta name="theme-color" content="#A2B2F2">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
@@ -49,8 +49,8 @@
             $(".includedFooter").load("footer.html");
 		});
 	</script>
-	
-	
+
+
 	<script src="./public/js/bootstrap.min.js"></script>
 	<script src="./public/js/swiper.jquery.min.js"></script>
     <script src='./public/js/ractive.js'></script>
@@ -221,7 +221,7 @@
 		<div class="row">
 			<div class="col-md-8">
 				<p><b>Master节点用于管理整个集群</b>，它会协调集群中的所有动作，比如调度应用、维护应用状态、扩容应用以及滚动更新等。</p>
-				<p><b>Node节点作为集群中的一个工作机器，一般是一台虚拟机或者物理机。 </b> 每一个node需要安装一个Kubelet，Kubelet相当于一个agent，用于管理节点并和master通信。 Node也需要安装容器操作的工具，比如Docker或rkt。生产级的 Kubernetes 集群最少要有3个几点。</p>
+				<p><b>Node节点作为集群中的一个工作机器，一般是一台虚拟机或者物理机。 </b> 每一个node需要安装一个Kubelet，Kubelet相当于一个agent，用于管理节点并和master通信。 Node也需要安装容器操作的工具，比如Docker或rkt。生产级的 Kubernetes 集群最少要有3个节点。</p>
 
 			</div>
 			<div class="col-md-4">
@@ -238,12 +238,12 @@
 				</p>
 
 				<p>
-					Kubernetes 集群既能部署在物理机，也可以部署在虚拟机上。想要从头开始部署 Kubernetes，使用 <a href="https://github.com/kubernetes/minikube">minikube</a> 是个好办法。Minikube是一个轻量级的 Kubernetes 实现，它可以在你的本机上创建一个VM，并在这之上部署一个包含一个节点（既是Master也是Node）的集群。Minikube 支持 Linux、Mac OS 和 Windows。Miniku CLI 提供了一些基本的操作来和你的集群交互，包括启动、停止、查看和删除（命令行中直接输入<b style="color: #3771e3;">minikube</b>就可以看到帮助说明）。
+					Kubernetes 集群既能部署在物理机，也可以部署在虚拟机上。想要从头开始部署 Kubernetes，使用 <a href="https://github.com/kubernetes/minikube">minikube</a> 是个好办法。Minikube是一个轻量级的 Kubernetes 实现，它可以在你的本机上创建一个VM，并在这之上部署一个包含一个节点（既是Master也是Node）的集群。Minikube 支持 Linux、Mac OS 和 Windows。Minikube CLI 提供了一些基本的操作来和你的集群交互，包括启动、停止、查看和删除（命令行中直接输入<b style="color: #3771e3;">minikube</b>就可以看到帮助说明）。
 					在这个训练营中，会提供一个预装好minikube的在线终端环境，这样你都不需要安装任何环境，就可以直接体验 Kubernetes 集群，是不是很酷呢！
 				</p>
 
 				<p></p>
-				<p>这下你大概知道 Kubernetes 是什么了吧, 接下来就让我们前往实战演练，开始我们的首个集群之旅吧。</p>
+				<p>你大概知道 Kubernetes 是什么了, 接下来就让我们前往实战演练，开始我们的首个集群之旅吧。</p>
 
 			</div>
 		</div>
