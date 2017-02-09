@@ -237,14 +237,14 @@
 		<div class="row">
 			<div class="col-md-8">
 
-				<p>为了实现Deployment的扩展，要保证新的Pod被创建和被编排到Node上时，有足够的资源；缩容时会相应地减少Pod的数量。Kubernetes还支持Pod的<a href="http://kubernetes.io/docs/user-guide/horizontal-pod-autoscaling/">自动扩展</a>但这超出了我们本次实战的范围。Kubernetes也支持缩容到0，会停止Deployment中的所有Pod。</p>
+				<p>为了实现Deployment的扩展，要保证新的Pod被创建和被编排到Node上时，有足够的资源；缩容时会相应地减少Pod的数量。Kubernetes还支持Pod的<a href="http://kubernetes.io/docs/user-guide/horizontal-pod-autoscaling/">自动扩展</a>，但这超出了我们本次实战的范围。Kubernetes也支持缩容到0，会停止Deployment中的所有Pod。</p>
 
 				<p>一旦你的应用中运行了多个实例，必然要用到流量的分发机制。Service有一个内置的负载均衡器，可以将网络流量分发给Pod。Service会通过端口持续监控这些运行的Pod，从而保证流量只分发给可用的Pod。</p>
 
 			</div>
 			<div class="col-md-4">
 				<div class="content__box content__box_fill">
-					<p><i>扩/缩容是通过改变一个Deploument中实例的个数来实现的。</i></p>
+					<p><i>扩/缩容是通过改变一个Deployment中实例的个数来实现的。</i></p>
 				</div>
 			</div>
 		</div>
